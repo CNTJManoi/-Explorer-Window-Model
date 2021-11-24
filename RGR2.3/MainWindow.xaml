@@ -1,0 +1,260 @@
+﻿<Window x:Class="RGR2._3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RGR2._3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1000" MinWidth="920">
+    <Grid Name="GridRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" MinWidth="199" />
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Name="GridTop" Background="#FF72A0C6" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <DockPanel VerticalAlignment="Center">
+                <Image Source="Resources/buttons.png" Stretch="None" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                <WrapPanel DockPanel.Dock="Right" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,10,0">
+                    <TextBox Width="200" Background="#FFECF2F9" HorizontalAlignment="Center" VerticalAlignment="Center" Height="22" Margin="10,0,0,0" BorderBrush="#FFECF2F9"></TextBox>
+                    <Image Source="Resources/search.png" Height="22"/>
+                </WrapPanel>
+                <ComboBox VerticalAlignment="Center" BorderBrush="#FFECF2F9" SelectedIndex="0">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="#FFECF2F9" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                    <ComboBoxItem Content="Библиотеки\Изображения"/>
+                    <ComboBoxItem Content="D:\игры"/>
+                    <ComboBoxItem Content="E:\EFI"/>
+                    <ComboBoxItem Content="E:\Прош\Фотошоп"/>
+                    <ComboBoxItem Content="E:\Прош\AMD"/>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel Grid.Row="1" >
+                <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Button Margin="10,3,10,0" Background="#FFEFF3FA">
+                        <TextBlock Text="Упорядочить" Margin="10,5"></TextBlock>
+                    </Button>
+                    <Button Margin="10,3,10,0" Background="#FFEFF3FA">
+                        <TextBlock Text="Добавить в библиотеку" Margin="10,5"></TextBlock>
+                    </Button>
+                    <Button Margin="10,3,10,0" Background="#FFEFF3FA">
+                        <TextBlock Text="Общий доступ" Margin="10,5"></TextBlock>
+                    </Button>
+                    <Button Margin="10,3,10,0" Background="#FFEFF3FA">
+                        <TextBlock Text="Записать на оптический диск" Margin="10,5"></TextBlock>
+                    </Button>
+                    <Button Margin="10,3,10,0" Background="#FFEFF3FA">
+                        <TextBlock Text="Новая папка" Margin="10,5"></TextBlock>
+                    </Button>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Margin="10,3,10,0" Background="{x:Null}" Height="30" BorderBrush="{x:Null}">
+                        <Image Source="Resources/list.png" />
+                    </Button>
+                    <Button Margin="10,3,10,0" Background="{x:Null}" Height="30" BorderBrush="{x:Null}">
+                        <Image Source="Resources/sort.png" />
+                    </Button>
+                    <Button Margin="10,3,10,0" Background="{x:Null}" Height="30" BorderBrush="{x:Null}">
+                        <Image Source="Resources/help.png" />
+                    </Button>
+                </WrapPanel>
+            </DockPanel>
+            </Grid>
+        <Grid Name="GridBottom" Background="#FFF1F5FB" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <WrapPanel >
+                <Image  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,5" Source="Resources/Images/Penguins.jpg"></Image>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Пингвины.jpg" Margin="0,0,0,5"></TextBlock>
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Рисунок JPEG" Foreground="#FF252525"></TextBlock>
+                </StackPanel>
+            </WrapPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+                <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Дата съемки: " Foreground="#FF252525" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"></TextBlock>
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="18.02.2008 5:07" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                </WrapPanel>
+                <WrapPanel Margin="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Ключевые слова: " Foreground="#FF252525" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"></TextBlock>
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Добавьте клю..." VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2">
+                <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Оценка:" Foreground="#FF252525" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Image Source="Resources/stars.png" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </WrapPanel>
+                <WrapPanel Margin="0,5,0,0" HorizontalAlignment="Center">
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Размеры: " Foreground="#FF252525" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"></TextBlock>
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="1024 x 768" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3">
+                <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Размер: " Foreground="#FF252525" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="759 КБ" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                </WrapPanel>
+                <WrapPanel Margin="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Название: " Foreground="#FF252525" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"></TextBlock>
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Добавьте название" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="4">
+                <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Авторы: " Foreground="#FF252525" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock FontFamily="Mongolian Baiti" FontSize="12" Text="Corbis" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                </WrapPanel>
+            </StackPanel>
+        </Grid>
+        <GridSplitter ShowsPreview="False" Name="GridSplitterLeft" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="3" Background="Black" ResizeDirection="Columns" ResizeBehavior="PreviousAndCurrent"></GridSplitter>
+        <GridSplitter ShowsPreview="False" Name="GridSplitterRight" Grid.Row="1" Grid.Column="1" Width="3" Background="Black" ResizeDirection="Columns" ResizeBehavior="CurrentAndNext"/>
+        <Grid Name="CenterLeft" Grid.Row="1" Grid.Column="0">
+            <ScrollViewer FontFamily="Mongolian Baiti" FontSize="14" BorderBrush="White">
+                <StackPanel Margin="0,10">
+                    <Expander Header="Избранное">
+                        <StackPanel >
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/downloads.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Загрузки" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/places.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Недавние места" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/desktop.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Рабочий стол" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="Библиотеки" Margin="0,5,0,0">
+                        <StackPanel >
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/video.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Видео" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/documents.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Документы" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/images.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Изображения" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/music.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Музыка" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="Компьютер" Margin="0,5,0,0">
+                        <StackPanel >
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/windowsDisk.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Локальный диск (C:)" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/disk.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Новый том (D:)" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/disk.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="DATA (E:)" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/disk.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="Информация (F:)" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="Сеть" Margin="0,5,0,0">
+                        <StackPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/pc.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="1-ПК" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/pc.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="2-ПК" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/pc.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="3-ПК" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/pc.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="4-ПК" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/pc.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="5-ПК" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/pc.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="6-ПК" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                            <WrapPanel Margin="20,0,0,0">
+                                <Image Source="Resources/pc.png" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="UniformToFill" Width="25" Height="25"/>
+                                <TextBlock Text="7-ПК" VerticalAlignment="Center"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <WrapPanel Grid.Row="1" Grid.Column="1">
+            <StackPanel Margin="10,5">
+                <Image Source="Resources/Images/Chrysanthemum.jpg" Width="50" Height="50"/>
+                <TextBlock Text="Рис. 1" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Margin="10,5">
+                <Image Source="Resources/Images/Desert.jpg" Width="50" Height="50"/>
+                <TextBlock Text="Рис. 2" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Margin="10,5">
+                <Image Source="Resources/Images/Hydrangeas.jpg" Width="50" Height="50"/>
+                <TextBlock Text="Рис. 3" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Margin="10,5">
+                <Image Source="Resources/Images/Jellyfish.jpg" Width="50" Height="50"/>
+                <TextBlock Text="Рис. 4" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Margin="10,5">
+                <Image Source="Resources/Images/Koala.jpg" Width="50" Height="50"/>
+                <TextBlock Text="Рис. 5" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Margin="10,5">
+                <Image Source="Resources/Images/Lighthouse.jpg" Width="50" Height="50"/>
+                <TextBlock Text="Рис. 6" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Margin="10,5">
+                <Image Source="Resources/Images/Penguins.jpg" Width="50" Height="50"/>
+                <TextBlock Text="Рис. 7" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Margin="10,5">
+                <Image Source="Resources/Images/Tulips.jpg" Width="50" Height="50"/>
+                <TextBlock Text="Рис. 8" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+        </WrapPanel>
+        <Image Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Resources/Images/Penguins.jpg" Margin="10"></Image>
+    </Grid>
+</Window>
